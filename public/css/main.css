@@ -1,0 +1,130 @@
+body {
+  text-decoration: none;
+  width: 100%; }
+
+.wrap {
+  width: 100%; }
+
+.content {
+  width: 87.5%;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-column-gap: 1em;
+  grid-template-rows: repeat(5, 20%);
+  margin: auto; }
+
+body {
+  text-decoration: none;
+  width: 100%; }
+
+.wrap {
+  width: 100%; }
+
+.content {
+  width: 87.5%;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-column-gap: 1em;
+  grid-template-rows: repeat(5, 20%);
+  margin: auto; }
+
+header {
+  background-color: #FB8122;
+  height: 200px;
+  width: 100%; }
+  header h1 {
+    color: #FFFFFF;
+    grid-column-start: 2;
+    grid-column-end: 6;
+    width: 335px;
+    height: 100px;
+    grid-row-start: 3;
+    grid-row-end: 4; }
+  header .logo {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 2;
+    grid-row-end: 4; }
+  header form {
+    grid-column-start: 11;
+    grid-column-end: 13;
+    grid-row-start: 4;
+    grid-row-end: 4; }
+    header form input {
+      width: 217px; }
+
+.search_block {
+  width: 87.5%; }
+
+body {
+  text-decoration: none;
+  width: 100%; }
+
+.wrap {
+  width: 100%; }
+
+.content {
+  width: 87.5%;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-column-gap: 1em;
+  grid-template-rows: repeat(5, 20%);
+  margin: auto; }
+
+.single_day_box {
+  width: 11%;
+  height: 50px;
+  border: 5px solid #FB8122;
+  border-radius: 15px;
+  margin-bottom: 10px; }
+
+.month_left {
+  grid-column-start: 1;
+  grid-column-end: 7; }
+
+.month_right {
+  grid-column-start: 7;
+  grid-column-end: 13; }
+
+.month_header {
+  margin-bottom: 10px;
+  background-color: #FB8122;
+  border-radius: 15px; }
+  .month_header h3 {
+    color: #FFFFFF;
+    text-align: center; }
+  .month_header .weekdays {
+    width: 100%;
+    display: inline-flex;
+    justify-content: space-between;
+    color: #FFFFFF; }
+
+.calendar .week_row {
+  width: 100%;
+  display: inline-flex;
+  position: relative;
+  justify-content: space-between; }
+
+body {
+  text-decoration: none;
+  width: 100%; }
+
+.wrap {
+  width: 100%; }
+
+.content {
+  width: 87.5%;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-column-gap: 1em;
+  grid-template-rows: repeat(5, 20%);
+  margin: auto; }
+
+footer {
+  background-color: #1D2228;
+  height: 100px;
+  width: 100%; }
+  footer h3 {
+    color: #FFFFFF;
+    grid-column-start: 1;
+    grid-column-end: 13; }

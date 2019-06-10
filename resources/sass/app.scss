@@ -1,8 +1,17 @@
-// Fonts
-@import url('https://fonts.googleapis.com/css?family=Nunito');
+body{text-decoration: none;
+width:100%;}
 
-// Variables
-@import 'variables';
+.wrap{width:100%;}
 
-// Bootstrap
-@import '~bootstrap/scss/bootstrap';
+.content{
+    width:87.5%;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-column-gap: 1em;
+    grid-template-rows: repeat(5, 20%);
+    margin:auto;
+}
+
+
+
+

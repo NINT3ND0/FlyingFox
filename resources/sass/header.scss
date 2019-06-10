@@ -1,0 +1,27 @@
+@import '_variables';
+@import 'app';
+
+header{
+    background-color: $orange_main;
+    height: 200px;
+    width: $full_width;
+    h1{
+        color:$white;
+        @include columns(2, 6);
+        width: 335px;
+        height: 100px;
+        @include rows(3,4);
+    }
+    .logo{
+        @include columns(1, 2);
+        @include rows(2,4);
+    }
+    form{
+        @include columns(11, 13);
+        input{width: 217px;}
+        @include rows(4,4);
+    }
+}
+
+
+
