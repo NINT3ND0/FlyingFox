@@ -1,7 +1,13 @@
+@import '_variables';
+
 footer{
+    position: fixed;
+    left: 0;
+    bottom: 0;
     background-color: $dark_gray;
     width: $full;
     h3{color:$white;
-        margin: auto;}
+        margin: auto;
+    }
 }
 

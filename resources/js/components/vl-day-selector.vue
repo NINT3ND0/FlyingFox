@@ -12,7 +12,7 @@
 </template>
 
 <script>
-import VlCalendar from './vl-calendar'
+import VlCalendar from '../components/vl-calendar'
 
 export default {
   name: 'VlDaySelector',

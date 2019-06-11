@@ -1,0 +1,18 @@
+@import url("https://fonts.googleapis.com/css?family=Revalia&display=swap");
+body {
+  text-decoration: none;
+  width: 100%;
+  margin: 0;
+  font-family: 'Revalia', cursive;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 100%; }
+
+.wrap {
+  width: 100%; }
+
+.content {
+  width: 87.5%;
+  margin: auto; }
+
+/*# sourceMappingURL=app.css.map */
