@@ -1,14 +1,13 @@
 body{text-decoration: none;
-width:100%;}
+width:100%;
+margin: 0;
+@include set_font();
+font-size: 100%;}
 
 .wrap{width:100%;}
 
 .content{
     width:87.5%;
-    display: grid;
-    grid-template-columns: repeat(12, 1fr);
-    grid-column-gap: 1em;
-    grid-template-rows: repeat(5, 20%);
     margin:auto;
 }
 

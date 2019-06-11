@@ -1,75 +1,178 @@
+@import url("https://fonts.googleapis.com/css?family=Revalia&display=swap");
+.header-content {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-column-gap: 1em;
+  grid-auto-rows: minmax(100px, auto); }
+  .header-content .logo {
+    grid-column-start: 1;
+    grid-column-end: 3; }
+  .header-content .title {
+    grid-column-start: 3;
+    grid-column-end: 6; }
+  .header-content a {
+    grid-column-start: 11;
+    grid-column-end: 13; }
+
+.search_radio_buttons {
+  display: grid;
+  grid-template-columns: 4fr repeat(4, 2fr);
+  grid-column-gap: 1em;
+  grid-auto-rows: minmax(55px, auto); }
+
+.detail_controls {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-column-gap: 1em;
+  grid-auto-rows: minmax(55px, auto); }
+
+.footer-content {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-column-gap: 1em;
+  grid-auto-rows: minmax(100px, auto); }
+  .footer-content h3 {
+    grid-column-start: 1;
+    grid-column-end: 7; }
+
 body {
   text-decoration: none;
-  width: 100%; }
+  width: 100%;
+  margin: 0;
+  font-family: 'Revalia', cursive;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 100%; }
 
 .wrap {
   width: 100%; }
 
 .content {
   width: 87.5%;
-  display: grid;
-  grid-template-columns: repeat(12, 1fr);
-  grid-column-gap: 1em;
-  grid-template-rows: repeat(5, 20%);
-  margin: auto; }
-
-body {
-  text-decoration: none;
-  width: 100%; }
-
-.wrap {
-  width: 100%; }
-
-.content {
-  width: 87.5%;
-  display: grid;
-  grid-template-columns: repeat(12, 1fr);
-  grid-column-gap: 1em;
-  grid-template-rows: repeat(5, 20%);
   margin: auto; }
 
 header {
   background-color: #FB8122;
-  height: 200px;
-  width: 100%; }
-  header h1 {
+  width: 100%;
+  font-size: 100%; }
+  header p {
     color: #FFFFFF;
-    grid-column-start: 2;
-    grid-column-end: 6;
-    width: 335px;
-    height: 100px;
-    grid-row-start: 3;
-    grid-row-end: 4; }
-  header .logo {
-    grid-column-start: 1;
-    grid-column-end: 2;
-    grid-row-start: 2;
-    grid-row-end: 4; }
-  header form {
-    grid-column-start: 11;
-    grid-column-end: 13;
-    grid-row-start: 4;
-    grid-row-end: 4; }
-    header form input {
-      width: 217px; }
+    margin: auto;
+    text-align: center;
+    font-size: 2em; }
+  header .logo img {
+    width: 100%;
+    height: 100%;
+    margin: auto; }
+  header a {
+    color: #FFFFFF;
+    text-decoration: none;
+    text-align: center;
+    margin: auto;
+    font-size: 2em;
+    transition: color 1s; }
+  header a:hover {
+    color: #1D2228; }
 
-.search_block {
-  width: 87.5%; }
+.search_radio_buttons {
+  width: 100%;
+  margin-top: 15px;
+  align-items: center; }
+  .search_radio_buttons .trip_type_selector {
+    display: block;
+    position: relative;
+    color: #FB8122;
+    font-size: 1em;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    user-select: none;
+    /* When the checkbox is checked, add a blue background */
+    /* Create the checkmark/indicator (hidden when not checked) */
+    /* Show the checkmark when checked */
+    /* When the radio button is checked, add a blue background */
+    /* Create the indicator (the dot/circle - hidden when not checked) */
+    /* Show the indicator (dot/circle) when checked */
+    /* Style the indicator (dot/circle) */ }
+    .search_radio_buttons .trip_type_selector input {
+      position: absolute;
+      opacity: 0;
+      cursor: pointer;
+      height: 0;
+      width: 0; }
+    .search_radio_buttons .trip_type_selector .radio_circle {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 15px;
+      width: 15px;
+      border: #1D2228 2px solid;
+      border-radius: 50%; }
+    .search_radio_buttons .trip_type_selector .checkmark {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 15px;
+      width: 15px;
+      border: #1D2228 2px solid; }
+    .search_radio_buttons .trip_type_selector input:checked ~ .checkmark {
+      background-color: #FB8122; }
+    .search_radio_buttons .trip_type_selector .checkmark:after {
+      content: "";
+      position: absolute;
+      display: none; }
+    .search_radio_buttons .trip_type_selector input:checked ~ .checkmark:after {
+      display: block; }
+    .search_radio_buttons .trip_type_selector input:checked ~ .radio_circle {
+      background-color: #FB8122; }
+    .search_radio_buttons .trip_type_selector .radio_circle:after {
+      content: "";
+      position: absolute;
+      display: none; }
+    .search_radio_buttons .trip_type_selector input:checked ~ .radio_circle:after {
+      display: block; }
+    .search_radio_buttons .trip_type_selector .container .radio_circle:after {
+      top: 9px;
+      left: 9px;
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: white; }
+    .search_radio_buttons .trip_type_selector .trip_type_selector:hover input ~ .checkmark {
+      background-color: #ccc; }
+    .search_radio_buttons .trip_type_selector .trip_type_selector:hover input ~ .radio_circle {
+      background-color: #ccc; }
+  .search_radio_buttons h2 {
+    margin: 0;
+    font-size: 1.5em;
+    color: #FB8122; }
 
-body {
-  text-decoration: none;
-  width: 100%; }
-
-.wrap {
-  width: 100%; }
-
-.content {
-  width: 87.5%;
-  display: grid;
-  grid-template-columns: repeat(12, 1fr);
-  grid-column-gap: 1em;
-  grid-template-rows: repeat(5, 20%);
-  margin: auto; }
+.detail_controls {
+  margin-top: 15px; }
+  .detail_controls label {
+    color: #FB8122; }
+    .detail_controls label input {
+      padding: 10px 0 10px 5px;
+      border: #FB8122 solid 2px;
+      border-radius: 10px;
+      font-family: 'Revalia', cursive;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 0.75em; }
+  .detail_controls .trip_details {
+    position: relative; }
+    .detail_controls .trip_details .search_btn {
+      position: absolute;
+      bottom: 0;
+      border: none;
+      background: #FB8122;
+      color: #FFFFFF;
+      height: 40px;
+      width: 100%;
+      font-family: 'Revalia', cursive;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 0.75em;
+      border-radius: 10px; }
 
 .single_day_box {
   width: 11%;
@@ -77,14 +180,6 @@ body {
   border: 5px solid #FB8122;
   border-radius: 15px;
   margin-bottom: 10px; }
-
-.month_left {
-  grid-column-start: 1;
-  grid-column-end: 7; }
-
-.month_right {
-  grid-column-start: 7;
-  grid-column-end: 13; }
 
 .month_header {
   margin-bottom: 10px;
@@ -105,26 +200,11 @@ body {
   position: relative;
   justify-content: space-between; }
 
-body {
-  text-decoration: none;
-  width: 100%; }
-
-.wrap {
-  width: 100%; }
-
-.content {
-  width: 87.5%;
-  display: grid;
-  grid-template-columns: repeat(12, 1fr);
-  grid-column-gap: 1em;
-  grid-template-rows: repeat(5, 20%);
-  margin: auto; }
-
 footer {
   background-color: #1D2228;
-  height: 100px;
   width: 100%; }
   footer h3 {
     color: #FFFFFF;
-    grid-column-start: 1;
-    grid-column-end: 13; }
+    margin: auto; }
+
+/*# sourceMappingURL=main.css.map */

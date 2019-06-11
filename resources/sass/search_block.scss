@@ -1,7 +1,128 @@
-@import '_variables';
-
-.search_block{width:$content_width;}
 
 .search_radio_buttons{
+    width: 100%;
+    margin-top: $margin;
+    align-items: center;
+    .trip_type_selector{
+        display: block;
+        position: relative;
+        color: $orange_main;
+        font-size: 1em;
+        padding-left: 35px;
+        margin-bottom: 12px;
+        user-select: none;
+        input{
+            position: absolute;
+            opacity: 0;
+            cursor: pointer;
+            height: 0;
+            width: 0;
+        }
+        .radio_circle{
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 15px;
+            width: 15px;
+            border: $dark_gray $border_width solid;
+            border-radius: 50%;
+        }
+        .checkmark{
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 15px;
+            width: 15px;
+            border: $dark_gray $border_width solid;
+        }
+
+        /* When the checkbox is checked, add a blue background */
+        input:checked ~ .checkmark {
+            background-color: $orange_main;
+        }
+
+        /* Create the checkmark/indicator (hidden when not checked) */
+        .checkmark:after {
+            content: "";
+            position: absolute;
+            display: none;
+        }
+
+        /* Show the checkmark when checked */
+        input:checked ~ .checkmark:after {
+            display: block;
+        }
+
+
+        /* When the radio button is checked, add a blue background */
+        input:checked ~ .radio_circle {
+            background-color: $orange_main;
+        }
+
+        /* Create the indicator (the dot/circle - hidden when not checked) */
+        .radio_circle:after {
+            content: "";
+            position: absolute;
+            display: none;
+        }
+
+        /* Show the indicator (dot/circle) when checked */
+        input:checked ~ .radio_circle:after {
+            display: block;
+        }
+
+        /* Style the indicator (dot/circle) */
+        .container .radio_circle:after {
+            top: 9px;
+            left: 9px;
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: white;
+        }
+        .trip_type_selector:hover input ~ .checkmark {
+            background-color: #ccc;
+        }
+        .trip_type_selector:hover input ~ .radio_circle {
+            background-color: #ccc;
+        }
+    }
+
+    h2{
+        margin: 0;
+        font-size: 1.5em;
+        color: $orange_main;
+    }
 
 }
+
+.detail_controls{
+    margin-top: $margin;
+    label{
+        color: $orange_main;
+        input{
+            padding: 10px 0 10px 5px;
+            border: $orange_main solid $border_width;
+            border-radius: $border_radius;
+            @include set_font();
+            font-size: 0.75em;
+        }
+    }
+    .trip_details{
+        position:relative;
+        .search_btn{
+            position:absolute;
+            bottom: 0;
+            border:none;
+            background: $orange_main;
+            color: $white;
+            height: $button_height;
+            width: $full;
+            @include set_font();
+            font-size: 0.75em;
+            border-radius: $border_radius;
+        }
+    }
+}
+
+

@@ -28,134 +28,124 @@
             
     <div class="wrap">
         <header>
-            <div class="content">
+            <div class="header-content content">
                 <div class ="logo">
                     <img src="{{URL::to('/')}}/images/logo.png" alt="Logo">
                 </div>
-                <div class = "title">
+                <p class="title">
                     Flying Fox
-                </div>
-                <form class="sign_in" role="form" method="GET" action="">
-                       <input class="btn btn_sign_in" type="submit" name="action" value="Sign In"/>
-                </form>
+                </p>
+                <a href="/login">Sign in</a>
             </div>
         </header>
-        <section class="search_block">
-            <div class="content">
-                <form>
-                    <div class="search_radio_buttons">
-                        <h2 class="motto">
-                            The fastest flight booking!
-                        </h2>
-                        <label class="Trip_type_selector">
-                            <input type="radio" class="radio_btn" name="trip-type-selector" value="on">
-                            <div class="radio_circle"></div>
-                            "One way"
-                        </label>
-                        <label class="Trip_type_selector">
-                            <input type="radio" class="radio_btn" name="trip-type-selector" value="on">
-                            <div class="radio_circle"></div>
-                            "Round trip"
-                        </label>
-                        <label class="Trip_type_selector">
-                            <input type="checkbox" class="checkbox_btn" name="trip-type-selector" value="on">
-                            <div class="radio_circle"></div>
-                            "Business"
-                        </label>
-                        <label class="Trip_type_selector">
-                            <input type="checkbox" class="checkbox_btn" name="trip-type-selector" value="on">
-                            <div class="radio_circle"></div>
-                            "First class"
-                        </label>
-                    </div>
-                    <div class="destination_controls">
-                        <div>
-                            <label>From</label>
-                            <div role="combobox" class="autosuggest_container" >
-                                <input type="text" class="destination_input" placeholder="Country, city or airport" value="Kyiv (Any)">
+        <section class="main-content content">
+            <div class="search_block">
+                    <form>
+                        <div class="search_radio_buttons">
+                            <h2 class="motto">
+                                The fastest flight booking!
+                            </h2>
+                            <label class="trip_type_selector">One way
+                                <input type="radio" class="radio_btn" name="trip-type-selector" value="on">
+                                <span class="radio_circle"></span>
+                            </label>
+                            <label class="trip_type_selector">Round trip
+                                <input type="radio" class="radio_btn" name="trip-type-selector" value="on">
+                                <span class="radio_circle"></span>
+                            </label>
+                            <label class="trip_type_selector">Business
+                                <input type="checkbox" class="checkbox_btn" name="trip-type-selector" value="on">
+                                <span class="checkmark"></span>
+                            </label>
+                            <label class="trip_type_selector">First class
+                                <input type="checkbox" class="checkbox_btn" name="trip-type-selector" value="on">
+                                <span class="checkmark"></span>
+                            </label>
+                        </div>
+                        <div class="detail_controls">
+                            <div class="trip_details">
+                                <label>
+                                    From
+                                    <input type="text" class="destination_input" placeholder="Country, city or airport" value="Kyiv (Any)">
+                                </label>
+                            </div>
+                            <div class="trip_details">
+                                <label>
+                                    To
+                                    <input type="text" class="destination_input" placeholder="Country, city or airport" value="Dortmund">
+                                </label>
+                            </div>
+                            <div class="trip_details">
+                                <label>
+                                    Passengers
+                                    <input type="text" class="passengers_quantity" placeholder="Number of passengers" value="1">
+                                </label>
+                            </div>
+                            <div class="date_range_selector trip_details">
+                                <label>
+                                    Depart
+                                    <input type="text" class="depart_date_input" placeholder="Depart date" value="6/5/19">
+                                </label>
+                            </div>
+                            <div class="date_range_selector trip_details">
+                                <label>
+                                    Return
+                                    <input type="text" class="return_date_input" placeholder="Return date" value="6/5/19">
+                                </label>
+                            </div>
+                            <div class="search_btn_container trip_details">
+                                <button class="search_btn" type="button" title="Search" aria-label="Search Flights">
+                                    Search flights
+                                </button>
                             </div>
                         </div>
-                        <div>
-                            <label>To</label>
-                            <div role="combobox" class="autosuggest_container" >
-                                <input type="text" class="destination_input" placeholder="Country, city or airport" value="Dortmund">
-                            </div>
-                        </div>
-                        <div>
-                            <label>Passengers</label>
-                             <div role="combobox" class="passengers_input_container" >
-                                <input type="text" class="passengers_quantity" placeholder="Number of passengers" value="1">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="date_controls">
-                        <div class="date_range_selector">
-                            <label>Depart</label>
-                            <button class="date_input" type="button" title="Departure date">
-                                <span class="date_input_text">6/5/19</span>
-                            </button>
-                        </div>
-                        <div class="date_range_selector">
-                            <label>Return</label>
-                            <button class="date_input" type="button" title="Departure date">
-                                <span class="date_input_text">6/5/19</span>
-                            </button>
-                        </div>
-                    </div>
-                    <div class="search_btn_container">
-                        <button class="search_btn" type="button" title="Search" aria-label="Search Flights">
-                                Search flights
-                        </button>
-                    </div>
-                </form>
+                    </form>
             </div>
+            <div class="date_picker">
+                    <div class="month month_left">
+                        <div class="month_header">
+                            <h3>May</h3>
+                            <div class="weekdays">
+                                @for ($i=1;$i<8;$i++)
+                                    <p class="weekday">Day {{$i}}</p>
+                                @endfor
+                            </div>
+                        </div>
+                        <div class="calendar">
+                            @for ($i=0;$i<5;$i++)
+                                <div class="week_row">
+                                    @for ($j=0;$j<7;$j++)
+                                        <div class="single_day_box"></div>
+                                    @endfor
+                                </div>
+                            @endfor
+                        </div>
+                    </div>
+                    <div class="month month_right">
+                        <div class="month_header">
+                            <h3>June</h3>
+                            <div class="weekdays">
+                                @for ($i=1;$i<8;$i++)
+                                    <p class="weekday">Day {{$i}}</p>
+                                @endfor
+                            </div>
+                        </div>
+                        <div class="calendar">
+                            @for ($i=0;$i<5;$i++)
+                                <div class="week_row">
+                                    @for ($j=0;$j<7;$j++)
+                                        <div class="single_day_box"></div>
+                                    @endfor
+                                </div>
+                            @endfor
+                        </div>
+                    </div>
+                </div>
         </section>
-        <div class="date_picker">
-            <div class="content">
-                <div class="month month_left">
-                    <div class="month_header">
-                        <h3>May</h3>
-                        <div class="weekdays">
-                            @for ($i=1;$i<8;$i++)
-                                <p class="weekday">Day {{$i}}</p>
-                            @endfor
-                        </div>
-                    </div>
-                    <div class="calendar">
-                        @for ($i=0;$i<5;$i++)
-                            <div class="week_row">
-                                @for ($j=0;$j<7;$j++)
-                                    <div class="single_day_box"></div>
-                                @endfor
-                            </div>
-                        @endfor
-                    </div>
-                </div>
-                <div class="month month_right">
-                    <div class="month_header">
-                        <h3>June</h3>
-                        <div class="weekdays">
-                            @for ($i=1;$i<8;$i++)
-                                <p class="weekday">Day {{$i}}</p>
-                            @endfor
-                        </div>
-                    </div>
-                    <div class="calendar">
-                        @for ($i=0;$i<5;$i++)
-                            <div class="week_row">
-                                @for ($j=0;$j<7;$j++)
-                                    <div class="single_day_box"></div>
-                                @endfor
-                            </div>
-                        @endfor
-                    </div>
-                </div>
-            </div>
-        </div>
         <footer>
-            <div class="content">
+            <div class="footer-content content">
                 <h3>
-                   FlyingFox 2019. All rights reserved. 
+                  LLC FlyingFox 2019. All rights reserved (c).
                 </h3>
             </div>
         </footer>  

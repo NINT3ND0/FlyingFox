@@ -4,3 +4,15 @@
 @mixin rows($start, $end){grid-row-start: $start;
     grid-row-end: $end;
 }
+@mixin set_font(){
+    font-family: 'Revalia', cursive;
+    font-style: normal;
+    font-weight: normal;
+    //line-height: $line_height;
+}
+@mixin set_grid($row_height, $column_width, $num_columns){
+    display: grid;
+    grid-template-columns: repeat($num_columns, $column_width);
+    grid-column-gap: 1em;
+    grid-auto-rows: minmax($row_height, auto);
+}
