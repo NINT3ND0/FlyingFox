@@ -6,7 +6,7 @@
                :start-date.sync="range.start"
                :end-date.sync="range.end"
           />
-
+                <tabs></tabs>
 <!--           <v-day-selector-->
 <!--               v-model="date"/>-->
            <fox-footer></fox-footer>
@@ -19,6 +19,7 @@
     import Search_block from '../components/Search_block'
     import VRangeSelector from './vl-range-selector'
     import VDaySelector from './vl-day-selector'
+    import Tabs from './Tabs'
     export default {
         name: 'app',
         components: {
@@ -26,7 +27,8 @@
             'fox-footer': Footer,
             'search-box': Search_block,
             VRangeSelector,
-            VDaySelector
+            VDaySelector,
+            tabs: Tabs
         },
         data () {
             return {

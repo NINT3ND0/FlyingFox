@@ -114,9 +114,10 @@
         position:relative;
         .search_btn{
             position:absolute;
+            cursor:pointer;
             bottom: 0;
             border:none;
-            background: $orange_main;
+            background: $dark_gray;
             color: $white;
             height: $button_height;
             width: $full;

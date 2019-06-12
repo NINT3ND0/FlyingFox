@@ -17,19 +17,19 @@
 
   &__month {
     display: inline-block;
-    margin-bottom: 30px;
+    margin-bottom: 15px;
     max-width: 80vw;
   }
 
   &__arrow {
     position: absolute;
-    top: $small_width;
+    top: 1px;
     background-repeat: no-repeat;
     background-position: center center;
     background-size: 75%;
     cursor: pointer;
-    width: 24px;
-    height: 24px;
+    width: 40px;
+    height: 40px;
 
     &--back {
       left: $small_width;
