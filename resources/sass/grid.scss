@@ -30,6 +30,12 @@
     h3{@include columns(1,7)}
 }
 
+.vl-calendar {
+    .calendar_wrap {
+        width: $content_width;
+        @include set_grid(100px, 1fr, 2);
+    }
+}
 
 
 

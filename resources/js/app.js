@@ -4,7 +4,7 @@
  * building robust, powerful web applications using Vue and Laravel.
  */
 import Vue from 'vue'
-//import App from './App'
+//import App from './App.vue'
 
 require('./bootstrap');
 
@@ -23,12 +23,7 @@ Vue.config.productionTip = false;
 //const files = require.context('./', true, /\.vue$/i);
 //files.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], files(key).default));
 
-Vue.component('app', require('./components/App.vue'));
-Vue.component('vl-day-selector', require('./components/vl-day-selector.vue').default);
-Vue.component('vl-range-selector', require('./components/vl-range-selector.vue').default);
-Vue.component('select_box', require('./components/Search_block.vue').default);
-Vue.component('header', require('./components/Header.vue').default);
-Vue.component('footer', require('./components/Footer.vue').default);
+Vue.component('app', require('./components/App.vue').default);
 
 
 /**
@@ -37,6 +32,6 @@ Vue.component('footer', require('./components/Footer.vue').default);
  * or customize the JavaScript scaffolding to fit your unique needs.
  */
 
-const app = new Vue({
+new Vue({
     el: '#app'
 });

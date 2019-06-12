@@ -35,6 +35,13 @@
     grid-column-start: 1;
     grid-column-end: 7; }
 
+.vl-calendar .calendar_wrap {
+  width: 87.5%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-column-gap: 1em;
+  grid-auto-rows: minmax(100px, auto); }
+
 body {
   text-decoration: none;
   width: 100%;
@@ -184,18 +191,20 @@ header {
   flex-direction: column; }
 
 .vl-calendar {
-  display: inline-block;
+  margin: auto;
+  margin-top: 10px;
+  width: 87.5%;
   position: relative;
-  background: #F6F6F6;
-  padding: 20px 0 0;
+  background: #FFF;
   text-align: center;
-  color: #3E3A4E;
-  font-size: 14px;
+  color: #1D2228;
+  font-size: 1em;
   user-select: none; }
+  .vl-calendar .calendar_wrap {
+    width: 100%; }
   .vl-calendar__month {
     display: inline-block;
     margin-bottom: 30px;
-    width: 300px;
     max-width: 80vw; }
   .vl-calendar__arrow {
     position: absolute;
@@ -213,83 +222,83 @@ header {
       right: 15px;
       background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAMAAAAM7l6QAAAAz1BMVEUZJjQZJjQZJjQZJjQZJjQZJjQZJjQZJjQZJjQZJjQZJjQZJjQZJjQZJjQZJjQZJjQZJjQZJjQZJjQZJjQZJjQZJjQZJjQZJjQZJjQZJjQZJjQZJjQZJjQZJjQZJjQZJjQZJjQZJjQZJjQZJjQZJjQZJjQZJjQZJjQZJjQZJjQZJjQZJjQZJjQZJjQZJjQZJjQZJjQZJjQZJjQZJjQZJjQZJjQZJjQZJjQZJjQZJjQZJjQZJjQZJjQZJjQZJjQZJjQZJjQZJjQZJjQZJjQZJjTQKaQcAAAARXRSTlMAAQIDBAUGBwgJCgsMDg8QERITFBUWGBkaGx0eHyAhIiMkJSYnKCkqLC0uLzAxMjQ1Nzg5Ojs/QEFCQ0RFRkdISUpLTE22Gs8EAAABVUlEQVR4AW3T4XaaMBwF8IvKRp2dU5F266qwMWXT1bWjqbMUanLf/5nWcIzByO9L/udcJRcIaHo3DMeDDlqF64KafIzfwzUVZPWQLZZ3gpSZj6beb6rNxEMtiAu+TGEFgmIIq5sqNYPhC256ODEqeWvme/6C63KvRqh9Ze7hTMRdt65V7vto8ZPf9DLnAtbtzfEZvZYdAEIFsJ44t3+PgIA5GgYvx8pjroArfoeTH67fkQJIeAU3/3LYSAILTvQ43O6MiuoztJzdt3isx09FZezJ2TFOeI0TFztTXkhbrZEmptoTcMEHJzU/H3Gl+6nm4RD8Ycas3jZmCitNzORXZadeXgO0WB52mfEe50L13IPm/eUSrg+VCs2r+8e1c7o/Fozt3Wz5OIDlzSUTWP4fytWlOdU3W1bX55/B812aJFkuqdYBHF60qagpkfbRxutPounQR8N/jIU0mXzMHWoAAAAASUVORK5CYII="); }
 
-.vl-calendar-month {
-  padding: 0 20px; }
-  .vl-calendar-month__title {
-    margin-bottom: 20px;
-    text-align: center;
-    font-weight: 600; }
-  .vl-calendar-month__week-numbers-column {
-    padding-top: 24px; }
-  .vl-calendar-month__week-number {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    margin: 5px 0;
-    width: 100%;
-    height: 24px;
-    color: #A0A0A0;
-    font-size: 10px; }
-  .vl-calendar-month__week-day {
-    display: inline-block;
-    margin-bottom: 10px;
-    width: 14%;
-    text-align: center;
-    color: #C83F3A;
-    font-size: 12px; }
-  .vl-calendar-month__day {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    margin: 5px 0;
-    cursor: pointer;
-    width: 14%;
-    height: 24px; }
-    .vl-calendar-month__day--offset-1 {
-      margin-left: calc(1 * 14%); }
-    .vl-calendar-month__day--offset-2 {
-      margin-left: calc(2 * 14%); }
-    .vl-calendar-month__day--offset-3 {
-      margin-left: calc(3 * 14%); }
-    .vl-calendar-month__day--offset-4 {
-      margin-left: calc(4 * 14%); }
-    .vl-calendar-month__day--offset-5 {
-      margin-left: calc(5 * 14%); }
-    .vl-calendar-month__day--offset-6 {
-      margin-left: calc(6 * 14%); }
-    .vl-calendar-month__day.disabled {
-      color: #B5B5B5;
-      pointer-events: none; }
-      .vl-calendar-month__day.disabled--first {
-        border-top-left-radius: 14px;
-        border-bottom-left-radius: 14px; }
-      .vl-calendar-month__day.disabled--last {
-        border-top-right-radius: 14px;
-        border-bottom-right-radius: 14px; }
-    .vl-calendar-month__day.selected {
-      background: #C83F3A;
-      color: #FFF;
-      font-weight: 800; }
-      .vl-calendar-month__day.selected.disabled {
-        border: 1px solid #3E3A4E;
-        background: #8e2b28;
-        color: #3E3A4E; }
-      .vl-calendar-month__day.selected--first {
-        border-top-left-radius: 14px;
-        border-bottom-left-radius: 14px; }
-      .vl-calendar-month__day.selected--last {
-        border-top-right-radius: 14px;
-        border-bottom-right-radius: 14px; }
-    .vl-calendar-month__day:hover:not(.selected) {
-      border-radius: 14px;
-      background: #C83F3A;
-      color: #FFF;
-      font-weight: 800; }
+.vl-calendar-month .vl-calendar-month__title {
+  background-color: #FB8122;
+  border-radius: 10px;
+  color: #FFFFFF;
+  padding: 10px 0 10px 0; }
+.vl-calendar-month__title {
+  margin-bottom: 20px;
+  text-align: center;
+  font-weight: 600; }
+.vl-calendar-month__week-numbers-column {
+  padding-top: 24px; }
+.vl-calendar-month__week-number {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin: 5px 0;
+  width: 100%;
+  height: 24px;
+  color: #A0A0A0;
+  font-size: 10px; }
+.vl-calendar-month__week-day {
+  display: inline-block;
+  margin-bottom: 10px;
+  width: 14%;
+  text-align: center;
+  color: #FB8122;
+  font-size: 12px; }
+.vl-calendar-month__day {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin: 5px 0;
+  cursor: pointer;
+  width: 14%;
+  height: 24px; }
+  .vl-calendar-month__day--offset-1 {
+    margin-left: calc(1 * 14%); }
+  .vl-calendar-month__day--offset-2 {
+    margin-left: calc(2 * 14%); }
+  .vl-calendar-month__day--offset-3 {
+    margin-left: calc(3 * 14%); }
+  .vl-calendar-month__day--offset-4 {
+    margin-left: calc(4 * 14%); }
+  .vl-calendar-month__day--offset-5 {
+    margin-left: calc(5 * 14%); }
+  .vl-calendar-month__day--offset-6 {
+    margin-left: calc(6 * 14%); }
+  .vl-calendar-month__day.disabled {
+    color: #B5B5B5;
+    pointer-events: none; }
+    .vl-calendar-month__day.disabled--first {
+      border-top-left-radius: 14px;
+      border-bottom-left-radius: 14px; }
+    .vl-calendar-month__day.disabled--last {
+      border-top-right-radius: 14px;
+      border-bottom-right-radius: 14px; }
+  .vl-calendar-month__day.selected {
+    background: #FB8122;
+    color: #FFF;
+    font-weight: 800; }
+    .vl-calendar-month__day.selected.disabled {
+      border: 1px solid #1D2228;
+      background: #cd5c04;
+      color: #1D2228; }
+    .vl-calendar-month__day.selected--first {
+      border-top-left-radius: 14px;
+      border-bottom-left-radius: 14px; }
+    .vl-calendar-month__day.selected--last {
+      border-top-right-radius: 14px;
+      border-bottom-right-radius: 14px; }
+  .vl-calendar-month__day:hover:not(.selected) {
+    border-radius: 14px;
+    background: #FB8122;
+    color: #FFF;
+    font-weight: 800; }
 
 footer {
-  position: fixed;
-  left: 0;
-  bottom: 0;
   background-color: #1D2228;
   width: 100%; }
   footer h3 {

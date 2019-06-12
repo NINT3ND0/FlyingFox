@@ -1,15 +1,15 @@
 <template>
-   <div id="app">
+    <div id="app">
+           <fox-header></fox-header>
+           <search-box/>
+           <v-range-selector
+               :start-date.sync="range.start"
+               :end-date.sync="range.end"
+          />
 
-       <fox-header></fox-header>
-       <search-box/>
-       <v-range-selector
-           :start-date.sync="range.start"
-           :end-date.sync="range.end"/>
-
-       <v-day-selector
-           v-model="date"/>
-       <fox-footer></fox-footer>
+<!--           <v-day-selector-->
+<!--               v-model="date"/>-->
+           <fox-footer></fox-footer>
    </div>
 </template>
 
@@ -20,7 +20,7 @@
     import VRangeSelector from './vl-range-selector'
     import VDaySelector from './vl-day-selector'
     export default {
-        name: 'App',
+        name: 'app',
         components: {
             'fox-header': Header,
             'fox-footer': Footer,

@@ -56,7 +56,7 @@
                     </div>
                     <div class="search_btn_container trip_details">
                         <button class="search_btn" type="button" title="Search" aria-label="Search Flights">
-                            Search flights
+                            Search
                         </button>
                     </div>
                 </div>

@@ -10,28 +10,31 @@
       @click="moveForward()"
     />
 
-    <vl-calendar-month
-      class="vl-calendar__month"
-      :month="currentMonthMonth"
-      :year="currentMonthYear"
-      :is-selected="isSelected"
-      :is-disabled="isDisabled"
-      :custom-classes="customClasses"
-      :show-weeks-number="showWeeksNumber"
-      @input="date => $emit('input', date)"
-    />
+    <div class="calendar_wrap">
 
-    <vl-calendar-month
-      v-if="!singleMonth"
-      class="vl-calendar__month"
-      :month="nextMonthMonth"
-      :year="nextMonthYear"
-      :is-selected="isSelected"
-      :is-disabled="isDisabled"
-      :custom-classes="customClasses"
-      :show-weeks-number="showWeeksNumber"
-      @input="date => $emit('input', date)"
-    />
+        <vl-calendar-month
+            class="vl-calendar__month"
+            :month="currentMonthMonth"
+            :year="currentMonthYear"
+            :is-selected="isSelected"
+            :is-disabled="isDisabled"
+            :custom-classes="customClasses"
+            :show-weeks-number="showWeeksNumber"
+            @input="date => $emit('input', date)"
+        />
+
+        <vl-calendar-month
+            v-if="!singleMonth"
+            class="vl-calendar__month"
+            :month="nextMonthMonth"
+            :year="nextMonthYear"
+            :is-selected="isSelected"
+            :is-disabled="isDisabled"
+            :custom-classes="customClasses"
+            :show-weeks-number="showWeeksNumber"
+            @input="date => $emit('input', date)"
+        />
+    </div>
   </div>
 </template>
 

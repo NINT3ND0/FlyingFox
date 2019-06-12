@@ -24,8 +24,8 @@
             position: absolute;
             top: 0;
             left: 0;
-            height: 15px;
-            width: 15px;
+            height: $small_width;
+            width: $small_width;
             border: $dark_gray $border_width solid;
             border-radius: 50%;
         }
@@ -33,8 +33,8 @@
             position: absolute;
             top: 0;
             left: 0;
-            height: 15px;
-            width: 15px;
+            height: $small_width;
+            width: $small_width;
             border: $dark_gray $border_width solid;
         }
 

@@ -1,5 +1,11 @@
 .vl-calendar-month {
-  padding: $vl-calendar-month-padding;
+
+    .vl-calendar-month__title{
+        background-color: $orange_main;
+        border-radius: $border-radius;
+        color:$white;
+        padding: 10px 0 10px 0;
+    }
 
   &__title {
     margin-bottom: 20px;
@@ -93,3 +99,4 @@
     }
   }
 }
+
