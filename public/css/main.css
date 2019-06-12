@@ -143,7 +143,7 @@ header {
       background-color: #ccc; }
   .search_radio_buttons h2 {
     margin: 0;
-    font-size: 1.5em;
+    font-size: 2em;
     color: #FB8122; }
 
 .detail_controls {
@@ -171,7 +171,7 @@ header {
       font-family: 'Revalia', cursive;
       font-style: normal;
       font-weight: normal;
-      font-size: 0.75em;
+      font-size: 1em;
       border-radius: 10px; }
 
 .vl-flex {
@@ -287,6 +287,9 @@ header {
       font-weight: 800; }
 
 footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
   background-color: #1D2228;
   width: 100%; }
   footer h3 {

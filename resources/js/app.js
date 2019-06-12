@@ -3,10 +3,14 @@
  * includes Vue and other libraries. It is a great starting point when
  * building robust, powerful web applications using Vue and Laravel.
  */
+import Vue from 'vue'
+//import App from './App'
 
 require('./bootstrap');
 
 window.Vue = require('vue');
+
+Vue.config.productionTip = false;
 
 /**
  * The following block of code may be used to automatically register your
@@ -16,10 +20,16 @@ window.Vue = require('vue');
  * Eg. ./components/ExampleComponent.vue -> <example-component></example-component>
  */
 
-// const files = require.context('./', true, /\.vue$/i);
-// files.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], files(key).default));
+//const files = require.context('./', true, /\.vue$/i);
+//files.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], files(key).default));
 
-Vue.component('example-component', require('./components/ExampleComponent.vue').default);
+Vue.component('app', require('./components/App.vue'));
+Vue.component('vl-day-selector', require('./components/vl-day-selector.vue').default);
+Vue.component('vl-range-selector', require('./components/vl-range-selector.vue').default);
+Vue.component('select_box', require('./components/Search_block.vue').default);
+Vue.component('header', require('./components/Header.vue').default);
+Vue.component('footer', require('./components/Footer.vue').default);
+
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to
@@ -28,5 +38,5 @@ Vue.component('example-component', require('./components/ExampleComponent.vue').
  */
 
 const app = new Vue({
-    el: '#app',
+    el: '#app'
 });

@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-
+        <meta name="csrf-token" content="{{ csrf_token() }}">
         <title>Flying Fox</title>
 
         <!-- Fonts -->
@@ -25,8 +25,12 @@
 {{--                </div>--}}
 {{--            @endif -->--}}
 
-            
     <div class="wrap">
+
+{{--            <div id="app">--}}
+{{--                <app></app>--}}
+{{--            </div>--}}
+{{--            <script type="text/javascript" src="../js/app.js"></script>--}}
         <header>
             <div class="header-content content">
                 <div class ="logo">
@@ -101,46 +105,6 @@
                         </div>
                     </form>
             </div>
-            <div class="date_picker">
-                    <div class="month month_left">
-                        <div class="month_header">
-                            <h3>May</h3>
-                            <div class="weekdays">
-                                @for ($i=1;$i<8;$i++)
-                                    <p class="weekday">Day {{$i}}</p>
-                                @endfor
-                            </div>
-                        </div>
-                        <div class="calendar">
-                            @for ($i=0;$i<5;$i++)
-                                <div class="week_row">
-                                    @for ($j=0;$j<7;$j++)
-                                        <div class="single_day_box"></div>
-                                    @endfor
-                                </div>
-                            @endfor
-                        </div>
-                    </div>
-                    <div class="month month_right">
-                        <div class="month_header">
-                            <h3>June</h3>
-                            <div class="weekdays">
-                                @for ($i=1;$i<8;$i++)
-                                    <p class="weekday">Day {{$i}}</p>
-                                @endfor
-                            </div>
-                        </div>
-                        <div class="calendar">
-                            @for ($i=0;$i<5;$i++)
-                                <div class="week_row">
-                                    @for ($j=0;$j<7;$j++)
-                                        <div class="single_day_box"></div>
-                                    @endfor
-                                </div>
-                            @endfor
-                        </div>
-                    </div>
-                </div>
         </section>
         <footer>
             <div class="footer-content content">
@@ -148,8 +112,8 @@
                   LLC FlyingFox 2019. All rights reserved (c).
                 </h3>
             </div>
-        </footer>  
-    </div>    
+        </footer>
+    </div>
     </body>
 </html>
 
