@@ -1,15 +1,11 @@
 <template>
     <div id="app">
-           <fox-header></fox-header>
            <search-box/>
            <v-range-selector
                :start-date.sync="range.start"
                :end-date.sync="range.end"
           />
-                <tabs></tabs>
-<!--           <v-day-selector-->
-<!--               v-model="date"/>-->
-           <fox-footer></fox-footer>
+            <tabs></tabs>
    </div>
 </template>
 

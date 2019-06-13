@@ -64,7 +64,7 @@ header {
   background-color: #FB8122;
   width: 100%;
   font-size: 100%; }
-  header p {
+  header .title {
     color: #FFFFFF;
     margin: auto;
     text-align: center;
@@ -346,7 +346,7 @@ header {
 footer {
   background-color: #1D2228;
   width: 100%;
-  margin-top: 20px; }
+  margin-top: 15px; }
   footer h3 {
     color: #FFFFFF;
     margin: auto; }

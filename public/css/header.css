@@ -4,7 +4,7 @@ header {
   font-size: 100%;
 }
 
-header p {
+header .title {
   color: #FFFFFF;
   margin: auto;
   text-align: center;
