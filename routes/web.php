@@ -23,3 +23,5 @@ Route::resource('flights', 'FlightsController');
 
 Route::post('/flights','FlightsController@index');
 Route::post('/admin/flights','FlightsController@store');
+
+Route::post('/admin', 'AdminController@login');

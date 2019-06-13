@@ -6,24 +6,21 @@
 
 @section('content')
 <div class="content">
-    {{request('From')}}
-    <ul>
-        @foreach ($flights as $flight)
-            <li>
-                <a href="{{$flight->CarrierURL}}">
-                    Carrier website
-                </a>
-            </li>
-            <li>
-                {{$flight->DepartTime}}
-            </li>
-            <li>
-                {{$flight->ArriveTime}}
-            </li>
-            <li>
-                {{$flight->Price}}
-            </li>
-        @endforeach
-    </ul>
+    <h3 class="result_title">{{request('From')}} - {{request('To')}} | {{request('depart_date')}}</h3>
+
+
+        <div class="flights">
+            @foreach ($flights as $flight)
+                <div class="one_flight">
+                    <div>Departure: {{$flight->DepartTime}}</div>
+                    <div> Arrival: {{$flight->ArriveTime}}</div>
+                    <div>Price: {{$flight->Price}}$</div>
+                    <a class="is-link" href="{{$flight->CarrierURL}}">
+                        Book tickets
+                    </a>
+                </div>
+
+            @endforeach
+        </div>
 </div>
 @endsection

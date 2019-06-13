@@ -4,9 +4,9 @@
             <div class ="logo">
                 <img src="../../images/logo.png" alt="Logo">
             </div>
-            <p class="title">
+            <div class="title">
                 Flying Fox
-            </p>
+            </div>
             <a href="/login">Sign in</a>
         </div>
     </header>

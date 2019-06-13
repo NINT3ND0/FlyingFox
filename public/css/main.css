@@ -42,6 +42,12 @@
   grid-column-gap: 1em;
   grid-auto-rows: minmax(100px, auto); }
 
+.one_flight {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-column-gap: 1em;
+  grid-auto-rows: minmax(50px, auto); }
+
 body {
   text-decoration: none;
   width: 100%;
@@ -59,6 +65,12 @@ body {
   margin: auto; }
   .content .tab-content {
     text-align: justify; }
+
+.login_page {
+  margin-top: 30px; }
+
+.destination_input {
+  padding: 10px; }
 
 header {
   background-color: #FB8122;
@@ -344,6 +356,9 @@ header {
     height: 2px;
     background-color: #FB8122;
     transition: transform 0.4s ease, width 0.4s ease; }
+
+.result_title {
+  margin-top: 15px; }
 
 footer {
   background-color: #1D2228;

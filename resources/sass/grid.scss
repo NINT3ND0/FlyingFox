@@ -37,6 +37,10 @@
     }
 }
 
+.one_flight{
+    @include set_grid(50px, 1fr, 6);
+}
+
 
 
 
