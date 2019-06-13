@@ -1,7 +1,7 @@
 <template>
     <section class="main-content content">
         <div class="search_block">
-            <form method="POST" action="/flights">
+            <form method="GET" action="/flights">
                 {{csrf_field}}
 
                 <div class="search_radio_buttons">
@@ -41,19 +41,19 @@
                     <div class="trip_details">
                         <label>
                             Passengers
-                            <input type="text" class="passengers_quantity" placeholder="Passengers" value="" name="num_of_passengers">
+                            <input type="number" class="passengers_quantity" placeholder="Passengers" value="" name="num_of_passengers" min="1" max="4">
                         </label>
                     </div>
                     <div class="date_range_selector trip_details">
                         <label>
                             Depart
-                            <input type="date" class="depart_date_input" placeholder="Depart date" value="" name="depart_date">
+                            <input type="date" class="date_input" placeholder="Depart date" value="" name="depart_date">
                         </label>
                     </div>
                     <div class="date_range_selector trip_details">
                         <label>
                             Return
-                            <input type="date" class="return_date_input" placeholder="Return date" value="" name="return_date">
+                            <input type="date" class="date_input" placeholder="Return date" value="" name="return_date">
                         </label>
                     </div>
                     <div class="search_btn_container trip_details">

@@ -112,6 +112,9 @@
     }
     .trip_details{
         position:relative;
+        .passengers_quantity{
+            width: $full;
+        }
         .search_btn{
             position:absolute;
             cursor:pointer;

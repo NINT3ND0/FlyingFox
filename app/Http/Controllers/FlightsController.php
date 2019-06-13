@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Flight;
 
 class FlightsController extends Controller
 {
@@ -11,9 +12,18 @@ class FlightsController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
-        //
+
+        //dd(request()->all());
+       $flights = Flight::where('From','=',request('From'))
+           ->where('To', '=', request('To'))
+           ->where('Date', '=', request('depart_date'))
+           ->select('Price', 'DepartTime', 'ArriveTime', 'CarrierURL')
+           ->get();
+       //dd($flights);
+       return view('flights.index', compact('flights', 'request'));
+
     }
 
     /**
@@ -34,7 +44,7 @@ class FlightsController extends Controller
      */
     public function store(Request $request)
     {
-        //
+
     }
 
     /**

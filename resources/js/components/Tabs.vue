@@ -36,17 +36,22 @@
 </template>
 
 <script>
+
     import Tabs from './VueTabsWithActiveLine.vue';
+    import config from '../../server_config.json';
+
     const TABS = [{
         title: 'About Us',
         value: 'tab1',
+        disabled: config.Tab1,
     }, {
         title: 'Disabled',
         value: 'tab2',
-        disabled: true,
+        disabled: config.Tab2,
     }, {
         title: 'News',
         value: 'tab3',
+        disabled: config.Tab3,
     }];
     export default {
         components: {
@@ -60,7 +65,7 @@
             handleClick(newTab) {
                 this.currentTab = newTab;
             },
-        },
+        }
     }
 </script>
 

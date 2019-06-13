@@ -20,3 +20,6 @@ Route::get('/login', function () {
 });
 
 Route::resource('flights', 'FlightsController');
+
+Route::post('/flights','FlightsController@index');
+Route::post('/admin/flights','FlightsController@store');

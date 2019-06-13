@@ -169,6 +169,8 @@ header {
       font-size: 0.75em; }
   .detail_controls .trip_details {
     position: relative; }
+    .detail_controls .trip_details .passengers_quantity {
+      width: 100%; }
     .detail_controls .trip_details .search_btn {
       position: absolute;
       cursor: pointer;

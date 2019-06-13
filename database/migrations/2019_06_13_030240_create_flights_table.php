@@ -19,6 +19,8 @@ class CreateFlightsTable extends Migration
             $table->text('To');
             $table->date('Date');
             $table->integer('Price');
+            $table->text('DepartTime');
+            $table->text('ArriveTime');
             $table->text('CarrierURL');
             $table->timestamps();
         });
