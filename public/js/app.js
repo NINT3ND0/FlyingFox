@@ -38630,9 +38630,7 @@ var staticRenderFns = [
     return _c("footer", { attrs: { id: "footer" } }, [
       _c("div", { staticClass: "footer-content content" }, [
         _c("h3", [
-          _vm._v(
-            "\n            LLC FlyingFox 2019. All rights reserved (c).\n        "
-          )
+          _vm._v("\n           Copyright (c) FlyingFox 2019\n        ")
         ])
       ])
     ])
@@ -38669,16 +38667,18 @@ var staticRenderFns = [
     return _c("header", { attrs: { id: "header" } }, [
       _c("div", { staticClass: "header-content content" }, [
         _c("div", { staticClass: "logo" }, [
-          _c("img", {
-            attrs: { src: __webpack_require__(/*! ../../images/logo.png */ "./resources/images/logo.png"), alt: "Logo" }
-          })
+          _c("a", { attrs: { href: "/" } }, [
+            _c("img", {
+              attrs: { src: __webpack_require__(/*! ../../images/logo.png */ "./resources/images/logo.png"), alt: "Logo" }
+            })
+          ])
         ]),
         _vm._v(" "),
         _c("div", { staticClass: "title" }, [
-          _vm._v("\n            Flying Fox\n        ")
+          _vm._v("\n             Flying Fox\n        ")
         ]),
         _vm._v(" "),
-        _c("a", { attrs: { href: "/login" } }, [_vm._v("Sign in")])
+        _c("a", { attrs: { href: "/login" } }, [_vm._v("Admin")])
       ])
     ])
   }

@@ -24,4 +24,8 @@ Route::resource('flights', 'FlightsController');
 Route::post('/flights','FlightsController@index');
 Route::post('/admin/flights','FlightsController@store');
 
-Route::post('/admin', 'AdminController@login');
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
+
+Auth::routes(['register'=> false]);

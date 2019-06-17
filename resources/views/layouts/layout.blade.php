@@ -9,7 +9,6 @@
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="{{ asset('css/main.css') }}" >
-    @yield('bulma_style')
 </head>
     <body>
         <div id="header">
@@ -21,6 +20,6 @@
         <div id="footer">
             <fox-footer></fox-footer>
         </div>
-        <script type="text/javascript" src="../js/app.js"></script>
+        <script type="text/javascript" src="../../js/app.js"></script>
     </body>
 </html>

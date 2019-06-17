@@ -2,12 +2,12 @@
     <header id="header">
         <div class="header-content content">
             <div class ="logo">
-                <img src="../../images/logo.png" alt="Logo">
+                <a href="/"><img src="../../images/logo.png" alt="Logo"></a>
             </div>
             <div class="title">
-                Flying Fox
+                 Flying Fox
             </div>
-            <a href="/login">Sign in</a>
+            <a href="/login">Admin</a>
         </div>
     </header>
 </template>

@@ -1,4 +1,4 @@
-@extends('layout')
+@extends('layouts.layout')
 
 @section('bulma_style')
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.2/css/bulma.css">
@@ -7,7 +7,6 @@
 @section('content')
 <div class="content">
     <h3 class="result_title">{{request('From')}} - {{request('To')}} | {{request('depart_date')}}</h3>
-
 
         <div class="flights">
             @foreach ($flights as $flight)
@@ -24,3 +23,4 @@
         </div>
 </div>
 @endsection
+

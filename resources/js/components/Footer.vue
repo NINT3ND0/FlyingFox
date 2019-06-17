@@ -2,7 +2,7 @@
     <footer id="footer">
         <div class="footer-content content">
             <h3>
-                LLC FlyingFox 2019. All rights reserved (c).
+               Copyright (c) FlyingFox 2019
             </h3>
         </div>
     </footer>
