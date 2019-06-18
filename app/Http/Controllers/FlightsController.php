@@ -15,80 +15,14 @@ class FlightsController extends Controller
     public function index(Request $request)
     {
 
-        //dd(request()->all());
        $flights = Flight::where('From','=',request('From'))
            ->where('To', '=', request('To'))
            ->where('Date', '=', request('depart_date'))
-           ->select('Price', 'DepartTime', 'ArriveTime', 'CarrierURL')
-           ->get();
+           ->select('From','To', 'Price', 'DepartTime', 'ArriveTime', 'CarrierURL')
+           ->paginate(6);
        //dd($flights);
-       return view('flights.index', compact('flights', 'request'));
+       return view('flights.index', compact('flights'));
 
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
-    {
-        //
-    }
-
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
-    public function store(Request $request)
-    {
-
-    }
-
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function show($id)
-    {
-        //
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function edit($id)
-    {
-        //
-    }
-
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, $id)
-    {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy($id)
-    {
-        //
-    }
 }

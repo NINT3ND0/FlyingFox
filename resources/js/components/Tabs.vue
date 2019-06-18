@@ -27,8 +27,6 @@
                 <ul>
                     <li><a href="/news">All News</a></li>
                     <li><a href="/news/recent">Recent News</a></li>
-                    <li><a href="/news/ainua">Ain.ua</a></li>
-                    <li><a href="/news/vcru">Vc.ru</a></li>
                 </ul>
             </div>
         </div>

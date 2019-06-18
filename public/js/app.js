@@ -2097,8 +2097,6 @@ var _server_config_json__WEBPACK_IMPORTED_MODULE_1___namespace = /*#__PURE__*/__
 //
 //
 //
-//
-//
 
 
 var TABS = [{
@@ -38940,13 +38938,7 @@ var staticRenderFns = [
       _vm._v(" "),
       _c("li", [
         _c("a", { attrs: { href: "/news/recent" } }, [_vm._v("Recent News")])
-      ]),
-      _vm._v(" "),
-      _c("li", [
-        _c("a", { attrs: { href: "/news/ainua" } }, [_vm._v("Ain.ua")])
-      ]),
-      _vm._v(" "),
-      _c("li", [_c("a", { attrs: { href: "/news/vcru" } }, [_vm._v("Vc.ru")])])
+      ])
     ])
   }
 ]

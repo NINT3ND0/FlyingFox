@@ -1,26 +1,31 @@
 @extends('layouts.layout')
 
-@section('bulma_style')
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.2/css/bulma.css">
+@section('styles')
 @endsection
 
 @section('content')
 <div class="content">
-    <h3 class="result_title">{{request('From')}} - {{request('To')}} | {{request('depart_date')}}</h3>
 
         <div class="flights">
             @foreach ($flights as $flight)
-                <div class="one_flight">
-                    <div>Departure: {{$flight->DepartTime}}</div>
-                    <div> Arrival: {{$flight->ArriveTime}}</div>
-                    <div>Price: {{$flight->Price}}$</div>
-                    <a class="is-link" href="{{$flight->CarrierURL}}">
+
+                    <div class="blog-post">
+                        <h2 class="blog-post-title">{{$flight->From}} - {{$flight->To}}</h2>
+                        <p class="blog-post-meta">
+                            Depart: {{$flight->DepartTime}}
+                            |
+                            Arrive: {{$flight->ArriveTime}}
+                            |
+                            Price: {{$flight->Price}}$
+                        </p>
+                    </div>
+
+                    <a class="btn btn-primary" href="{{$flight->CarrierURL}}">
                         Book tickets
                     </a>
-                </div>
 
             @endforeach
+            {{$flights->links()}}
         </div>
 </div>
 @endsection
-
